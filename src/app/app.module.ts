@@ -9,6 +9,11 @@ import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import {MatNativeDateModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
@@ -24,9 +29,15 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
     StoreModule.forRoot({
       tutorial: reducer
     })

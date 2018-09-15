@@ -18,7 +18,7 @@ export class CreateComponent implements OnInit {
     this.store.dispatch(new TutorialActions.AddTutorial({name: name, url: url}) )
   }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
 }

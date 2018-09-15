@@ -3,5 +3,17 @@
   <input type="text" placeholder="name" #name>
   <input type="text" placeholder="url" #url>
 
-  <button (click)="addTutorial(name.value,url.value)">Add a Tutorial</button>
+  <button mat-button (click)="addTutorial(name.value,url.value)">Add a Tutorial</button>
 </div>
+
+<div class="right">
+
+  <input type="text" placeholder="name" #name>
+  <input type="text" placeholder="url" #url>
+
+</div>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
